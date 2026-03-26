@@ -23,7 +23,7 @@ graph TD
     F -- Hardware Noise --> G[Bayesian State Recovery]
     F -- Software Bug --> H[Raise Formal Exception]
     G --> I[Heritage Transfer to New Node]
-    H --> J[System Rollback]```
+    H --> J[System Rollback] ```
 
 
 ### 1. Judicial Fault Isolation
