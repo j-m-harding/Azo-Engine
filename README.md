@@ -12,6 +12,16 @@ AZO Engine is an experimental execution layer that treats system failures as hig
 ---
 
 ## Core Architecture
+graph TD
+    A[Execution Start] --> B{Anomaly Detected?}
+    B -- No --> C[Update Reputation & Continue]
+    B -- Yes --> D[Quarantine Branch]
+    D --> E[Judicial Probing.rs]
+    E --> F{Deterministic?}
+    F -- Hardware Noise --> G[Bayesian State Recovery]
+    F -- Software Bug --> H[Raise Formal Exception]
+    G --> I[Heritage Transfer to New Node]
+    H --> J[System Rollback]
 
 ### 1. Judicial Fault Isolation
 Moving beyond traditional exception handling, AZO Engine implements a structured **Quarantine** workflow. When an execution branch exhibits non-deterministic behavior, it is isolated for active probing (`probing.rs`) to determine whether the root cause is a software regression or transient hardware-induced noise.
