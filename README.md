@@ -12,6 +12,7 @@ AZO Engine is an experimental execution layer that treats system failures as hig
 ---
 
 ## Core Architecture
+```mermaid
 graph TD
     A[Execution Start] --> B{Anomaly Detected?}
     B -- No --> C[Update Reputation & Continue]
