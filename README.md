@@ -1,3 +1,7 @@
+![Tests](https://img.shields.io/badge/tests-46%20passing-brightgreen)
+![Language](https://img.shields.io/badge/language-Rust-orange)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 # Azo-Engine
 A Rust-based execution engine implementing judicial fault isolation and Bayesian-driven state inheritance.
 
